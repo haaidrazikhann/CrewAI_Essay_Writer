@@ -1,7 +1,8 @@
 import google.generativeai as genai
+from google.colab import userdata
 from crewai import Agent, Task, Crew, LLM
 
-gemini_api_key= "YOUR_API_KEY"
+gemini_api_key= userdata.get("GOOGLE_API_KEY")
 genai.configure(api_key=gemini_api_key)
 
 # Initialize the LLM with the Gemini model
